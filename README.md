@@ -1,6 +1,9 @@
+```bash
 node --experimental-repl-await
+```
 
 
+```javascript
 db = require('./models/index.js')
 t = await db.Teacher.create({ name: 'gas' })
 c = await db.ClassRoom.create({ name: 'math', teacher_id: t.id})
@@ -20,3 +23,5 @@ await c.setStudents([1])
 cs2 = await c.getStudents()
 
 sc = await s.getClassRooms()
+```
+
