@@ -23,5 +23,8 @@ await c.setStudents([1])
 cs2 = await c.getStudents()
 
 sc = await s.getClassRooms()
+
+// create With many to many relation
+scc = await db.Student.create({ name: 'pimpim', ClassRooms: [c.id] }, { include: db.ClassRoom })
 ```
 
